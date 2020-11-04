@@ -1,16 +1,19 @@
 package com.toutiao.developer;
 
+import com.google.gson.JsonObject;
+
 import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
 public abstract class ToutiaoAPI  {
 
-    public abstract apps$token apps$token(
-            String tt_appid, String tt_secret,
-            String tt_grant_type);
+    ///////////////
+    public abstract apps$token_response apps$token (
+            String appid, String secret,
+            String grant_type);
 
-    public static class apps$token implements Serializable{
+    public static class apps$token_response  implements Serializable{
         private String access_token;
         private long expires_in;
 
@@ -33,10 +36,10 @@ public abstract class ToutiaoAPI  {
     //////////////////////////////////////////////////
 
 
-    public abstract apps$jscode2session apps$jscode2session(String tt_appid, String tt_secret,
-                                                    String tt_code, String tt_anonymous_code);
+    public abstract apps$jscode2session_response apps$jscode2session(String appid, String secret,
+                                                    String code, String anonymous_code);
 
-    public static class apps$jscode2session implements Serializable{
+    public static class apps$jscode2session_response  implements Serializable{
         private String session_key;
         private String openid;
         private String anonymous_openid;
@@ -68,22 +71,43 @@ public abstract class ToutiaoAPI  {
 
     ///////////////////////////////////////////////////////
 
+    public  class apps$set_user_storage_request implements Serializable{
+        public List<Kvltem> getTt_kv_list() {
+            return kv_list;
+        }
 
-    public abstract apps$set_user_storage apps$set_user_storage(String tt_access_token, String tt_openid,
-                                                        String tt_signature, String tt_sig_method,List<Kvltem> tt_kv_list);
+        public void setTt_kv_list(List<Kvltem> kv_list) {
+            this.kv_list = kv_list;
+        }
+
+        private  List<Kvltem> kv_list;
+
+    }
+    public abstract apps$set_user_storage_response apps$set_user_storage(String access_token, String openid,
+                                                        String signature, String sig_method,apps$set_user_storage_request body);
 
 
-    public  class apps$set_user_storage implements Serializable{
+    public  class apps$set_user_storage_response  implements Serializable{
         private long error;
 
     }
     //////////////////////////////////////////////////////
 
+    public static class apps$remove_user_storage_request implements Serializable {
+        private  List<String> kv_list;
 
-    public abstract apps$remove_user_storage apps$remove_user_storage(String tt_access_token, String tt_openid,
-                                                              String tt_signature, String tt_sig_method, List<String> tt_kv_list);
+        public List<String> getTt_kv_list() {
+            return kv_list;
+        }
 
-    public static class apps$remove_user_storage implements Serializable {
+        public void setTt_kv_list(List<String> kv_list) {
+            this.kv_list = kv_list;
+        }
+    }
+    public abstract apps$remove_user_storage_response apps$remove_user_storage_response(String access_token, String openid,
+                                                              String signature, String sig_method,apps$remove_user_storage_request body );
+
+    public static class apps$remove_user_storage_response  implements Serializable {
         private long error;
 
         public long getError() {
@@ -96,18 +120,16 @@ public abstract class ToutiaoAPI  {
     }
     /////////////////////////////////////////////////////
 
-    public abstract byte[] apps$qrcode(String tt_access_token, String tt_appname,
-                                        String tt_path, int tt_width, Rgb tt_line_color,Rgb tt_background,boolean tt_set_icon);
+    public abstract byte[] apps$qrcode(String access_token, String appname,
+                                        String path, int width, Rgb line_color,Rgb background,boolean set_icon);
 
 
     //////////////////////////////////////////////////
 
 
-    public abstract apps$game$template$send apps$game$template$send(String tt_X_Token);
 
 
-
-    public static class apps$game$template$send implements Serializable{
+    public static class apps$game$template$send_request  implements Serializable{
 
         private String log_id;
         private String data;
@@ -173,7 +195,30 @@ public abstract class ToutiaoAPI  {
             this.predicts = predicts;
         }
     }
-    public abstract String apps$subscribe_notification$developer$v1$notify(
+    public abstract apps$game$template$send_response apps$game$template$send(String X_Token, apps$game$template$send_request request);
+public static class apps$game$template$send_response {
+  private int errcode;
+
+    public int getErrcode() {
+        return errcode;
+    }
+
+    public void setErrcode(int errcode) {
+        this.errcode = errcode;
+    }
+
+    public String getErrmsg() {
+        return errmsg;
+    }
+
+    public void setErrmsg(String errmsg) {
+        this.errmsg = errmsg;
+    }
+
+    private   String errmsg;
+}
+    //////////////////////////////////////
+    public abstract apps$subscribe_notification$developer$v1$notify_response apps$subscribe_notification$developer$v1$notify(
              String access_token,
              String app_id,
              String tpl_id,
@@ -181,7 +226,22 @@ public abstract class ToutiaoAPI  {
              Map<String,String> data,
              String page
     );
+public class apps$subscribe_notification$developer$v1$notify_response{
+    private int  err_no;
+
+    public int getErr_no() {
+        return err_no;
+    }
+
+    public void setErr_no(int err_no) {
+        this.err_no = err_no;
+    }
+
+    private    String    err_tips;
+    }
 }
+
+
 
 
 

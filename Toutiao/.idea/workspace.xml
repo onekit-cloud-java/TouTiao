@@ -18,13 +18,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="localRepository" value="F:\BaiduNetdiskDownload\apache-maven-3.5.2\repository" />
-        <option name="mavenHome" value="F:/BaiduNetdiskDownload/apache-maven-3.5.2" />
-        <option name="userSettingsFile" value="F:\BaiduNetdiskDownload\apache-maven-3.5.2\settings.xml" />
-      </MavenGeneralSettings>
-    </option>
     <option name="enabledProfiles">
       <list>
         <option value="release" />
@@ -101,14 +94,18 @@
       <screen x="0" y="0" width="3072" height="1874" />
     </state>
     <state x="1736" y="435" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3072.1874@0.0.3072.1874" timestamp="1604406856620" />
+    <state x="1149" y="308" key="#com.intellij.ide.util.MemberChooser" timestamp="1604483701997">
+      <screen x="0" y="0" width="3072" height="1874" />
+    </state>
+    <state x="1149" y="308" key="#com.intellij.ide.util.MemberChooser/0.0.3072.1874@0.0.3072.1874" timestamp="1604483701997" />
     <state x="1099" y="448" key="FileChooserDialogImpl" timestamp="1604414316259">
       <screen x="0" y="0" width="3072" height="1874" />
     </state>
     <state x="1099" y="448" key="FileChooserDialogImpl/0.0.3072.1874@0.0.3072.1874" timestamp="1604414316259" />
-    <state x="421" y="190" key="SettingsEditor" timestamp="1604456470824">
+    <state x="421" y="190" key="SettingsEditor" timestamp="1604479652881">
       <screen x="0" y="0" width="3072" height="1874" />
     </state>
-    <state x="421" y="190" key="SettingsEditor/0.0.3072.1874@0.0.3072.1874" timestamp="1604456470824" />
+    <state x="421" y="190" key="SettingsEditor/0.0.3072.1874@0.0.3072.1874" timestamp="1604479652881" />
     <state x="522" y="273" key="new project wizard" timestamp="1604458606477">
       <screen x="0" y="0" width="3072" height="1874" />
     </state>
