@@ -144,7 +144,7 @@ public abstract class ToutiaoAPI {
         }
     }
 
-    public abstract apps$remove_user_storage_response apps$remove_user_storage_response(String access_token, String openid,
+    public abstract apps$remove_user_storage_response apps$remove_user_storage(String access_token, String openid,
                                                                                         String signature, String sig_method, apps$remove_user_storage_body body) throws errCode;
 
     public static class apps$remove_user_storage_response implements Serializable {
