@@ -16,6 +16,7 @@ com\toutiao\developer\ToutiaoAPI$apps$set_user_storage_request.class
 com\toutiao\developer\ToutiaoAPI$apps$game$template$send_response.class
 com\toutiao\developer\ToutiaoAPI2$tags$image_request.class
 com\toutiao\developer\Kvltem.class
+com\toutiao\developer\ToutiaoAPI$apps$subscribe_notification$developer$v1$notify_request.class
 com\toutiao\developer\ToutiaoAPI2$tags$image_request$tags$image_request_task.class
 com\toutiao\developer\ToutiaoAPI2$tags$text$antidirt_request.class
 com\toutiao\developer\ToutiaoAPI2$tags$image_response.class

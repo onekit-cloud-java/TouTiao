@@ -109,7 +109,7 @@ public abstract class ToutiaoAPI {
 
     ///////////////////////////////////////////////////////
 
-    public static class apps$set_user_storage_request implements Serializable {
+    public static class apps$set_user_storage_request  {
         public List<Kvltem> getTt_kv_list() {
             return kv_list;
         }
@@ -132,7 +132,7 @@ public abstract class ToutiaoAPI {
     }
     //////////////////////////////////////////////////////
 
-    public static class apps$remove_user_storage_request implements Serializable {
+    public static class apps$remove_user_storage_request  {
         private List<String> kv_list;
 
         public List<String> getTt_kv_list() {
@@ -232,7 +232,7 @@ public abstract class ToutiaoAPI {
     //////////////////////////////////////////////////
 
 
-    public static class apps$game$template$send_request implements Serializable {
+    public static class apps$game$template$send_request  {
 
         private String log_id;
         private String data;
@@ -301,7 +301,7 @@ public abstract class ToutiaoAPI {
 
     public abstract apps$game$template$send_response apps$game$template$send(String X_Token, apps$game$template$send_request request) throws errCode;
 
-    public static class apps$game$template$send_response {
+    public static class apps$game$template$send_response  implements Serializable{
         private int errcode;
 
         public int getErrcode() {
@@ -324,16 +324,68 @@ public abstract class ToutiaoAPI {
     }
 
     //////////////////////////////////////
+    public static class apps$subscribe_notification$developer$v1$notify_request{
+        private String access_token;
+        private   String app_id;
+
+        public String getAccess_token() {
+            return access_token;
+        }
+
+        public void setAccess_token(String access_token) {
+            this.access_token = access_token;
+        }
+
+        public String getApp_id() {
+            return app_id;
+        }
+
+        public void setApp_id(String app_id) {
+            this.app_id = app_id;
+        }
+
+        public String getTpl_id() {
+            return tpl_id;
+        }
+
+        public void setTpl_id(String tpl_id) {
+            this.tpl_id = tpl_id;
+        }
+
+        public String getOpen_id() {
+            return open_id;
+        }
+
+        public void setOpen_id(String open_id) {
+            this.open_id = open_id;
+        }
+
+        public Map<String, String> getData() {
+            return data;
+        }
+
+        public void setData(Map<String, String> data) {
+            this.data = data;
+        }
+
+        public String getPage() {
+            return page;
+        }
+
+        public void setPage(String page) {
+            this.page = page;
+        }
+
+        private  String tpl_id;
+        private  String open_id;
+        private   Map<String, String> data;
+        private   String page;
+    }
     public abstract apps$subscribe_notification$developer$v1$notify_response apps$subscribe_notification$developer$v1$notify(
-            String access_token,
-            String app_id,
-            String tpl_id,
-            String open_id,
-            Map<String, String> data,
-            String page
+            apps$subscribe_notification$developer$v1$notify_request request
     ) throws errCode;
 
-    public static class apps$subscribe_notification$developer$v1$notify_response {
+    public static class apps$subscribe_notification$developer$v1$notify_response implements Serializable{
         private int err_no;
 
         public int getErr_no() {
