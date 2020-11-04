@@ -1,18 +1,77 @@
 package com.toutiao.developer;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
-public abstract class ToutiaoAPI2  {
+public abstract class ToutiaoAPI2 {
+    public static class errCode extends Exception{
+        private String error_id;
+        private int code;
+        private String message;
+        private String exception;
+
+        public String getError_id() {
+            return error_id;
+        }
+
+        public void setError_id(String error_id) {
+            this.error_id = error_id;
+        }
+
+        public int getCode() {
+            return code;
+        }
+
+        public void setCode(int code) {
+            this.code = code;
+        }
+
+        public String getMessage() {
+            return message;
+        }
+
+        public void setMessage(String message) {
+            this.message = message;
+        }
+
+        public String getException() {
+            return exception;
+        }
+
+        public void setException(String exception) {
+            this.exception = exception;
+        }
+    }
+
+    ////////////
+    public static class tags$text$antidirt_request{
+
+        public List<String> tasks;
+
+        public List<String> getTasks() {
+            return tasks;
+        }
+
+        public void setTasks(List<String> tasks) {
+            this.tasks = tasks;
+        }
+
+        public String getContent() {
+            return content;
+        }
+
+        public void setContent(String content) {
+            this.content = content;
+        }
+
+        public  String content;
+    }
     public abstract tags$text$antidirt_response tags$text$antidirt(
-             String X_Token,
-             ArrayList<String> tasks,
-             String content);
+             String X_Token,tags$text$antidirt_request body)throws errCode;
 
 
 
-    public class tags$text$antidirt_response implements Serializable{
+    public static class tags$text$antidirt_response implements Serializable{
         private String log_id;
         private String data;
         private int code;
@@ -113,11 +172,62 @@ public abstract class ToutiaoAPI2  {
             this.hit = hit;
         }
     }
-    public abstract tags$image_response tags$image(ArrayList<String> targets,String image, String image_data);
+    ////////////////////////
+    public static class tags$image_request{
+        public static class tags$image_request_task{
+            public String image;
+
+            public String getImage() {
+                return image;
+            }
+
+            public void setImage(String image) {
+                this.image = image;
+            }
+        }
+        private    List<String> targets;
+        private   List<tags$image_request_task> tasks;
+        private  String image;
+
+        public List<String> getTargets() {
+            return targets;
+        }
+
+        public void setTargets(List<String> targets) {
+            this.targets = targets;
+        }
+
+        public List<tags$image_request_task> getTasks() {
+            return tasks;
+        }
+
+        public void setTasks(List<tags$image_request_task> tasks) {
+            this.tasks = tasks;
+        }
+
+        public String getImage() {
+            return image;
+        }
+
+        public void setImage(String image) {
+            this.image = image;
+        }
+
+        public String getImage_data() {
+            return image_data;
+        }
+
+        public void setImage_data(String image_data) {
+            this.image_data = image_data;
+        }
+
+        private String image_data;
+    }
+    public abstract tags$image_response tags$image(String X_Token,tags$image_request body)throws errCode;
 
 
 
-    public class tags$image_response implements Serializable{
+    public static class tags$image_response implements Serializable{
 
         private String log_id;
         private String data;

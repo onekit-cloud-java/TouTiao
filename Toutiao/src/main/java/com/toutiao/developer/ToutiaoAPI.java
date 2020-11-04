@@ -4,20 +4,53 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
-public abstract class ToutiaoAPI  {
-
-    public static class errCode extends Exception{
-private long error;
+public abstract class ToutiaoAPI {
+    public static class errCode extends Exception {
+        private long error;
         private long errcode;
         private String errmsg;
         private String message;
-    }
-    ///////////////////////////
-    public abstract apps$token_response apps$token (
-            String appid, String secret,
-            String grant_type)throws errCode;
 
-    public static class apps$token_response  implements Serializable {
+        public long getError() {
+            return error;
+        }
+
+        public void setError(long error) {
+            this.error = error;
+        }
+
+        public long getErrcode() {
+            return errcode;
+        }
+
+        public void setErrcode(long errcode) {
+            this.errcode = errcode;
+        }
+
+        public String getErrmsg() {
+            return errmsg;
+        }
+
+        public void setErrmsg(String errmsg) {
+            this.errmsg = errmsg;
+        }
+
+        @Override
+        public String getMessage() {
+            return message;
+        }
+
+        public void setMessage(String message) {
+            this.message = message;
+        }
+    }
+
+    ///////////////////////////
+    public abstract apps$token_response apps$token(
+            String appid, String secret,
+            String grant_type) throws errCode;
+
+    public static class apps$token_response implements Serializable {
         private String access_token;
         private long expires_in;
 
@@ -42,9 +75,9 @@ private long error;
 
 
     public abstract apps$jscode2session_response apps$jscode2session(String appid, String secret,
-                                                    String code, String anonymous_code)throws errCode;
+                                                                     String code, String anonymous_code) throws errCode;
 
-    public static class apps$jscode2session_response  implements Serializable{
+    public static class apps$jscode2session_response implements Serializable {
         private String session_key;
         private String openid;
         private String anonymous_openid;
@@ -76,7 +109,7 @@ private long error;
 
     ///////////////////////////////////////////////////////
 
-    public  class apps$set_user_storage_request implements Serializable{
+    public static class apps$set_user_storage_request implements Serializable {
         public List<Kvltem> getTt_kv_list() {
             return kv_list;
         }
@@ -85,21 +118,22 @@ private long error;
             this.kv_list = kv_list;
         }
 
-        private  List<Kvltem> kv_list;
+        private List<Kvltem> kv_list;
 
     }
+
     public abstract apps$set_user_storage_response apps$set_user_storage(String access_token, String openid,
-                                                        String signature, String sig_method,apps$set_user_storage_request body)throws errCode;
+                                                                         String signature, String sig_method, apps$set_user_storage_request body) throws errCode;
 
 
-    public  class apps$set_user_storage_response  implements Serializable{
+    public class apps$set_user_storage_response implements Serializable {
         private long error;
 
     }
     //////////////////////////////////////////////////////
 
     public static class apps$remove_user_storage_request implements Serializable {
-        private  List<String> kv_list;
+        private List<String> kv_list;
 
         public List<String> getTt_kv_list() {
             return kv_list;
@@ -109,10 +143,11 @@ private long error;
             this.kv_list = kv_list;
         }
     }
-    public abstract apps$remove_user_storage_response apps$remove_user_storage_response(String access_token, String openid,
-                                                              String signature, String sig_method,apps$remove_user_storage_request body )throws errCode;
 
-    public static class apps$remove_user_storage_response  implements Serializable {
+    public abstract apps$remove_user_storage_response apps$remove_user_storage_response(String access_token, String openid,
+                                                                                        String signature, String sig_method, apps$remove_user_storage_request body) throws errCode;
+
+    public static class apps$remove_user_storage_response implements Serializable {
         private long error;
 
         public long getError() {
@@ -123,18 +158,81 @@ private long error;
             this.error = error;
         }
     }
+
     /////////////////////////////////////////////////////
+    public static class apps$qrcode_request {
+        private String access_token;
+        private String appname;
 
-    public abstract byte[] apps$qrcode(String access_token, String appname,
-                                        String path, int width, Rgb line_color,Rgb background,boolean set_icon)throws errCode;
+        public String getAccess_token() {
+            return access_token;
+        }
 
+        public void setAccess_token(String access_token) {
+            this.access_token = access_token;
+        }
+
+        public String getAppname() {
+            return appname;
+        }
+
+        public void setAppname(String appname) {
+            this.appname = appname;
+        }
+
+        public String getPath() {
+            return path;
+        }
+
+        public void setPath(String path) {
+            this.path = path;
+        }
+
+        public int getWidth() {
+            return width;
+        }
+
+        public void setWidth(int width) {
+            this.width = width;
+        }
+
+        public Rgb getLine_color() {
+            return line_color;
+        }
+
+        public void setLine_color(Rgb line_color) {
+            this.line_color = line_color;
+        }
+
+        public Rgb getBackground() {
+            return background;
+        }
+
+        public void setBackground(Rgb background) {
+            this.background = background;
+        }
+
+        public boolean isSet_icon() {
+            return set_icon;
+        }
+
+        public void setSet_icon(boolean set_icon) {
+            this.set_icon = set_icon;
+        }
+
+        private String path;
+        private int width;
+        private Rgb line_color;
+        private Rgb background;
+        private boolean set_icon;
+    }
+
+    public abstract byte[] apps$qrcode(apps$qrcode_request body) throws errCode;
 
     //////////////////////////////////////////////////
 
 
-
-
-    public static class apps$game$template$send_request  implements Serializable{
+    public static class apps$game$template$send_request implements Serializable {
 
         private String log_id;
         private String data;
@@ -200,49 +298,53 @@ private long error;
             this.predicts = predicts;
         }
     }
-    public abstract apps$game$template$send_response apps$game$template$send(String X_Token, apps$game$template$send_request request)throws errCode;
-public static class apps$game$template$send_response {
-  private int errcode;
 
-    public int getErrcode() {
-        return errcode;
+    public abstract apps$game$template$send_response apps$game$template$send(String X_Token, apps$game$template$send_request request) throws errCode;
+
+    public static class apps$game$template$send_response {
+        private int errcode;
+
+        public int getErrcode() {
+            return errcode;
+        }
+
+        public void setErrcode(int errcode) {
+            this.errcode = errcode;
+        }
+
+        public String getErrmsg() {
+            return errmsg;
+        }
+
+        public void setErrmsg(String errmsg) {
+            this.errmsg = errmsg;
+        }
+
+        private String errmsg;
     }
 
-    public void setErrcode(int errcode) {
-        this.errcode = errcode;
-    }
-
-    public String getErrmsg() {
-        return errmsg;
-    }
-
-    public void setErrmsg(String errmsg) {
-        this.errmsg = errmsg;
-    }
-
-    private   String errmsg;
-}
     //////////////////////////////////////
     public abstract apps$subscribe_notification$developer$v1$notify_response apps$subscribe_notification$developer$v1$notify(
-             String access_token,
-             String app_id,
-             String tpl_id,
-             String open_id,
-             Map<String,String> data,
-             String page
-    )throws errCode;
-public class apps$subscribe_notification$developer$v1$notify_response{
-    private int  err_no;
+            String access_token,
+            String app_id,
+            String tpl_id,
+            String open_id,
+            Map<String, String> data,
+            String page
+    ) throws errCode;
 
-    public int getErr_no() {
-        return err_no;
-    }
+    public static class apps$subscribe_notification$developer$v1$notify_response {
+        private int err_no;
 
-    public void setErr_no(int err_no) {
-        this.err_no = err_no;
-    }
+        public int getErr_no() {
+            return err_no;
+        }
 
-    private    String    err_tips;
+        public void setErr_no(int err_no) {
+            this.err_no = err_no;
+        }
+
+        private String err_tips;
     }
 }
 
