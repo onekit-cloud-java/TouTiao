@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class ToutiaoAPI2 implements Serializable {
+public abstract class ToutiaoAPI2  {
     public abstract tags$text$antidirt tags$text$antidirt(
              String tt_X_Token,
              ArrayList<String> tt_tasks,
@@ -12,7 +12,7 @@ public abstract class ToutiaoAPI2 implements Serializable {
 
 
 
-    public class tags$text$antidirt {
+    public class tags$text$antidirt implements Serializable{
         private String log_id;
         private String data;
         private int code;
@@ -117,7 +117,7 @@ public abstract class ToutiaoAPI2 implements Serializable {
 
 
 
-    public class checkImageResult {
+    public class checkImageResult implements Serializable{
 
         private String log_id;
         private String data;
