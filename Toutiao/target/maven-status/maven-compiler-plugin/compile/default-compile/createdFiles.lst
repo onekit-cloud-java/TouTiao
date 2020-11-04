@@ -7,6 +7,7 @@ com\toutiao\developer\Rgb.class
 com\toutiao\developer\ToutiaoAPI$apps$remove_user_storage_response.class
 com\toutiao\developer\ToutiaoAPI$apps$token_response.class
 com\toutiao\developer\ToutiaoAPI$apps$subscribe_notification$developer$v1$notify_response.class
+com\toutiao\developer\ToutiaoAPI$errCode.class
 com\toutiao\developer\ToutiaoAPI$apps$remove_user_storage_request.class
 com\toutiao\developer\ToutiaoAPI2$tags$text$antidirt_response.class
 com\toutiao\developer\ToutiaoAPI$apps$set_user_storage_request.class

@@ -6,12 +6,18 @@ import java.util.Map;
 
 public abstract class ToutiaoAPI  {
 
-    ///////////////
+    public static class errCode extends Exception{
+private long error;
+        private long errcode;
+        private String errmsg;
+        private String message;
+    }
+    ///////////////////////////
     public abstract apps$token_response apps$token (
             String appid, String secret,
-            String grant_type);
+            String grant_type)throws errCode;
 
-    public static class apps$token_response  implements Serializable{
+    public static class apps$token_response  implements Serializable {
         private String access_token;
         private long expires_in;
 
@@ -31,11 +37,12 @@ public abstract class ToutiaoAPI  {
             this.expires_in = expires_in;
         }
     }
+
     //////////////////////////////////////////////////
 
 
     public abstract apps$jscode2session_response apps$jscode2session(String appid, String secret,
-                                                    String code, String anonymous_code);
+                                                    String code, String anonymous_code)throws errCode;
 
     public static class apps$jscode2session_response  implements Serializable{
         private String session_key;
@@ -82,7 +89,7 @@ public abstract class ToutiaoAPI  {
 
     }
     public abstract apps$set_user_storage_response apps$set_user_storage(String access_token, String openid,
-                                                        String signature, String sig_method,apps$set_user_storage_request body);
+                                                        String signature, String sig_method,apps$set_user_storage_request body)throws errCode;
 
 
     public  class apps$set_user_storage_response  implements Serializable{
@@ -103,7 +110,7 @@ public abstract class ToutiaoAPI  {
         }
     }
     public abstract apps$remove_user_storage_response apps$remove_user_storage_response(String access_token, String openid,
-                                                              String signature, String sig_method,apps$remove_user_storage_request body );
+                                                              String signature, String sig_method,apps$remove_user_storage_request body )throws errCode;
 
     public static class apps$remove_user_storage_response  implements Serializable {
         private long error;
@@ -119,7 +126,7 @@ public abstract class ToutiaoAPI  {
     /////////////////////////////////////////////////////
 
     public abstract byte[] apps$qrcode(String access_token, String appname,
-                                        String path, int width, Rgb line_color,Rgb background,boolean set_icon);
+                                        String path, int width, Rgb line_color,Rgb background,boolean set_icon)throws errCode;
 
 
     //////////////////////////////////////////////////
@@ -193,7 +200,7 @@ public abstract class ToutiaoAPI  {
             this.predicts = predicts;
         }
     }
-    public abstract apps$game$template$send_response apps$game$template$send(String X_Token, apps$game$template$send_request request);
+    public abstract apps$game$template$send_response apps$game$template$send(String X_Token, apps$game$template$send_request request)throws errCode;
 public static class apps$game$template$send_response {
   private int errcode;
 
@@ -223,7 +230,7 @@ public static class apps$game$template$send_response {
              String open_id,
              Map<String,String> data,
              String page
-    );
+    )throws errCode;
 public class apps$subscribe_notification$developer$v1$notify_response{
     private int  err_no;
 
