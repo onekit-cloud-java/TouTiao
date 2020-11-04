@@ -1,7 +1,5 @@
 package com.toutiao.developer;
 
-import com.google.gson.JsonObject;
-
 import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
