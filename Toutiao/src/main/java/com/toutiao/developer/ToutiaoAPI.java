@@ -1,10 +1,11 @@
 package com.toutiao.developer;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public abstract class ToutiaoAPI {
+public abstract class ToutiaoAPI implements Serializable {
 
     public abstract apps$token apps$token(
             String tt_appid, String tt_secret,
