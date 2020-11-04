@@ -25,11 +25,6 @@
         <option name="userSettingsFile" value="F:\BaiduNetdiskDownload\apache-maven-3.5.2\settings.xml" />
       </MavenGeneralSettings>
     </option>
-    <option name="enabledProfiles">
-      <list>
-        <option value="release" />
-      </list>
-    </option>
   </component>
   <component name="ProjectId" id="1jlcIs4ZwKzUj0I4KfVBsN8Y7UL" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -55,6 +50,18 @@
       <recent name="C:\GIT\github.com(cloud-java)\Toutiao\src\main\java\com\toutiao" />
     </key>
   </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -74,6 +81,7 @@
       <workItem from="1604459629236" duration="104000" />
       <workItem from="1604459756096" duration="2175000" />
       <workItem from="1604464727199" duration="2442000" />
+      <workItem from="1604477608131" duration="797000" />
     </task>
     <servers />
   </component>
@@ -85,12 +93,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="499" y="87" key="#Project_Structure" timestamp="1604414317827">
