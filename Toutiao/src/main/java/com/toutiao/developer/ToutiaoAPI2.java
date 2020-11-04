@@ -5,14 +5,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class ToutiaoAPI2  {
-    public abstract tags$text$antidirt tags$text$antidirt(
-             String tt_X_Token,
-             ArrayList<String> tt_tasks,
+    public abstract tags$text$antidirt_response tags$text$antidirt(
+             String X_Token,
+             ArrayList<String> tasks,
              String content);
 
 
 
-    public class tags$text$antidirt implements Serializable{
+    public class tags$text$antidirt_response implements Serializable{
         private String log_id;
         private String data;
         private int code;
@@ -113,11 +113,11 @@ public abstract class ToutiaoAPI2  {
             this.hit = hit;
         }
     }
-    public abstract checkImageResult checkImage(ArrayList<String> tt_targets,String tt_image, String tt_image_data);
+    public abstract tags$image_response tags$image(ArrayList<String> targets,String image, String image_data);
 
 
 
-    public class checkImageResult implements Serializable{
+    public class tags$image_response implements Serializable{
 
         private String log_id;
         private String data;
