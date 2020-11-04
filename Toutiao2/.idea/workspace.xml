@@ -25,7 +25,7 @@
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../gitee.com/x2x" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
@@ -52,6 +52,7 @@
       <workItem from="1604414986537" duration="717000" />
       <workItem from="1604456201309" duration="396000" />
       <workItem from="1604456622900" duration="1835000" />
+      <workItem from="1604458529911" duration="79000" />
     </task>
     <servers />
   </component>
@@ -75,9 +76,9 @@
       <screen x="0" y="0" width="3072" height="1874" />
     </state>
     <state x="421" y="190" key="SettingsEditor/0.0.3072.1874@0.0.3072.1874" timestamp="1604456470824" />
-    <state x="522" y="273" key="new project wizard" timestamp="1604458459463">
+    <state x="522" y="273" key="new project wizard" timestamp="1604458606477">
       <screen x="0" y="0" width="3072" height="1874" />
     </state>
-    <state x="522" y="273" key="new project wizard/0.0.3072.1874@0.0.3072.1874" timestamp="1604458459463" />
+    <state x="522" y="273" key="new project wizard/0.0.3072.1874@0.0.3072.1874" timestamp="1604458606477" />
   </component>
 </project>
