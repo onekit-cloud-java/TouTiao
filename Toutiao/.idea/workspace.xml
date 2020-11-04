@@ -18,19 +18,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MavenImportPreferences">
-<<<<<<< HEAD
+
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="localRepository" value="F:\BaiduNetdiskDownload\apache-maven-3.5.2\repository" />
         <option name="mavenHome" value="F:/BaiduNetdiskDownload/apache-maven-3.5.2" />
         <option name="userSettingsFile" value="F:\BaiduNetdiskDownload\apache-maven-3.5.2\settings.xml" />
       </MavenGeneralSettings>
-=======
-    <option name="enabledProfiles">
-      <list>
-        <option value="release" />
-      </list>
->>>>>>> cf494f58214f1864c61f85b9b1848b412dc5c146
     </option>
   </component>
   <component name="ProjectId" id="1jlcIs4ZwKzUj0I4KfVBsN8Y7UL" />
