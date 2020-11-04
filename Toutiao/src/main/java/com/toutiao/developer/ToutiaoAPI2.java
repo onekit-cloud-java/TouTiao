@@ -12,7 +12,7 @@ public abstract class ToutiaoAPI2 implements Serializable {
 
 
 
-    public class tags$text$antidirt {
+    public static class tags$text$antidirt {
         private String log_id;
         private String data;
         private int code;
