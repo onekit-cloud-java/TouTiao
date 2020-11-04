@@ -109,7 +109,7 @@ public abstract class ToutiaoAPI {
 
     ///////////////////////////////////////////////////////
 
-    public static class apps$set_user_storage_request  {
+    public static class apps$set_user_storage_body  {
         public List<Kvltem> getTt_kv_list() {
             return kv_list;
         }
@@ -123,7 +123,7 @@ public abstract class ToutiaoAPI {
     }
 
     public abstract apps$set_user_storage_response apps$set_user_storage(String access_token, String openid,
-                                                                         String signature, String sig_method, apps$set_user_storage_request body) throws errCode;
+                                                                         String signature, String sig_method, apps$set_user_storage_body body) throws errCode;
 
 
     public class apps$set_user_storage_response implements Serializable {
@@ -132,7 +132,7 @@ public abstract class ToutiaoAPI {
     }
     //////////////////////////////////////////////////////
 
-    public static class apps$remove_user_storage_request  {
+    public static class apps$remove_user_storage_body  {
         private List<String> kv_list;
 
         public List<String> getTt_kv_list() {
@@ -145,7 +145,7 @@ public abstract class ToutiaoAPI {
     }
 
     public abstract apps$remove_user_storage_response apps$remove_user_storage_response(String access_token, String openid,
-                                                                                        String signature, String sig_method, apps$remove_user_storage_request body) throws errCode;
+                                                                                        String signature, String sig_method, apps$remove_user_storage_body body) throws errCode;
 
     public static class apps$remove_user_storage_response implements Serializable {
         private long error;
@@ -160,7 +160,7 @@ public abstract class ToutiaoAPI {
     }
 
     /////////////////////////////////////////////////////
-    public static class apps$qrcode_request {
+    public static class apps$qrcode_body {
         private String access_token;
         private String appname;
 
@@ -227,12 +227,12 @@ public abstract class ToutiaoAPI {
         private boolean set_icon;
     }
 
-    public abstract byte[] apps$qrcode(apps$qrcode_request body) throws errCode;
+    public abstract byte[] apps$qrcode(apps$qrcode_body body) throws errCode;
 
     //////////////////////////////////////////////////
 
 
-    public static class apps$game$template$send_request  {
+    public static class apps$game$template$send_body  {
 
         private String log_id;
         private String data;
@@ -299,7 +299,7 @@ public abstract class ToutiaoAPI {
         }
     }
 
-    public abstract apps$game$template$send_response apps$game$template$send(String X_Token, apps$game$template$send_request request) throws errCode;
+    public abstract apps$game$template$send_response apps$game$template$send(String X_Token, apps$game$template$send_body request) throws errCode;
 
     public static class apps$game$template$send_response  implements Serializable{
         private int errcode;
@@ -324,7 +324,7 @@ public abstract class ToutiaoAPI {
     }
 
     //////////////////////////////////////
-    public static class apps$subscribe_notification$developer$v1$notify_request{
+    public static class apps$subscribe_notification$developer$v1$notify_body{
         private String access_token;
         private   String app_id;
 
@@ -382,7 +382,7 @@ public abstract class ToutiaoAPI {
         private   String page;
     }
     public abstract apps$subscribe_notification$developer$v1$notify_response apps$subscribe_notification$developer$v1$notify(
-            apps$subscribe_notification$developer$v1$notify_request request
+            apps$subscribe_notification$developer$v1$notify_body request
     ) throws errCode;
 
     public static class apps$subscribe_notification$developer$v1$notify_response implements Serializable{

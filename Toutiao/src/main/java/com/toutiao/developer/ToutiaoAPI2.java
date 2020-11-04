@@ -44,7 +44,7 @@ public abstract class ToutiaoAPI2 {
     }
 
     ////////////
-    public static class tags$text$antidirt_request{
+    public static class tags$text$antidirt_body{
 
         public List<String> tasks;
 
@@ -67,7 +67,7 @@ public abstract class ToutiaoAPI2 {
         public  String content;
     }
     public abstract tags$text$antidirt_response tags$text$antidirt(
-             String X_Token,tags$text$antidirt_request body)throws errCode;
+             String X_Token,tags$text$antidirt_body body)throws errCode;
 
 
 
@@ -173,8 +173,8 @@ public abstract class ToutiaoAPI2 {
         }
     }
     ////////////////////////
-    public static class tags$image_request{
-        public static class tags$image_request_task{
+    public static class tags$image_body{
+        public static class tags$image_body_task{
             public String image;
 
             public String getImage() {
@@ -186,7 +186,7 @@ public abstract class ToutiaoAPI2 {
             }
         }
         private    List<String> targets;
-        private   List<tags$image_request_task> tasks;
+        private   List<tags$image_body_task> tasks;
         private  String image;
 
         public List<String> getTargets() {
@@ -197,11 +197,11 @@ public abstract class ToutiaoAPI2 {
             this.targets = targets;
         }
 
-        public List<tags$image_request_task> getTasks() {
+        public List<tags$image_body_task> getTasks() {
             return tasks;
         }
 
-        public void setTasks(List<tags$image_request_task> tasks) {
+        public void setTasks(List<tags$image_body_task> tasks) {
             this.tasks = tasks;
         }
 
@@ -223,7 +223,7 @@ public abstract class ToutiaoAPI2 {
 
         private String image_data;
     }
-    public abstract tags$image_response tags$image(String X_Token,tags$image_request body)throws errCode;
+    public abstract tags$image_response tags$image(String X_Token,tags$image_body body)throws errCode;
 
 
 
