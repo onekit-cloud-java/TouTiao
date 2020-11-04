@@ -1,9 +1,10 @@
 package com.toutiao.developer;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class ToutiaoAPI2 {
+public abstract class ToutiaoAPI2 implements Serializable {
     public abstract tags$text$antidirt tags$text$antidirt(
              String tt_X_Token,
              ArrayList<String> tt_tasks,
