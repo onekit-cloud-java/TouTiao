@@ -1,4 +1,4 @@
-package toutiao.cloud;
+package com.toutiao.developer;
 
 import java.io.Serializable;
 
