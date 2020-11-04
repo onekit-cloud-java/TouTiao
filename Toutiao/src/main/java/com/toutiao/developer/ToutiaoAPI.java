@@ -196,19 +196,19 @@ public abstract class ToutiaoAPI {
             this.width = width;
         }
 
-        public RGB2 getLine_color() {
+        public RGB getLine_color() {
             return line_color;
         }
 
-        public void setLine_color(RGB2 line_color) {
+        public void setLine_color(RGB line_color) {
             this.line_color = line_color;
         }
 
-        public RGB2 getBackground() {
+        public RGB getBackground() {
             return background;
         }
 
-        public void setBackground(RGB2 background) {
+        public void setBackground(RGB background) {
             this.background = background;
         }
 
@@ -222,8 +222,8 @@ public abstract class ToutiaoAPI {
 
         private String path;
         private int width;
-        private RGB2 line_color;
-        private RGB2 background;
+        private RGB line_color;
+        private RGB background;
         private boolean set_icon;
     }
 
