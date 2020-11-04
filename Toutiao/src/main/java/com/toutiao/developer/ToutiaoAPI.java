@@ -133,14 +133,14 @@ public abstract class ToutiaoAPI {
     //////////////////////////////////////////////////////
 
     public static class apps$remove_user_storage_body  {
-        private List<String> kv_list;
+        private List<String> key;
 
-        public List<String> getTt_kv_list() {
-            return kv_list;
+        public List<String> getKey() {
+            return key;
         }
 
-        public void setTt_kv_list(List<String> kv_list) {
-            this.kv_list = kv_list;
+        public void setKey(List<String> key) {
+            this.key = key;
         }
     }
 
