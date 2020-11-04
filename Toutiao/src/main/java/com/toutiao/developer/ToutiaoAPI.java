@@ -4,13 +4,13 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
-public abstract class ToutiaoAPI implements Serializable {
+public abstract class ToutiaoAPI  {
 
     public abstract apps$token apps$token(
             String tt_appid, String tt_secret,
             String tt_grant_type);
 
-    public static class apps$token {
+    public static class apps$token implements Serializable{
         private String access_token;
         private long expires_in;
 
@@ -36,7 +36,7 @@ public abstract class ToutiaoAPI implements Serializable {
     public abstract apps$jscode2session apps$jscode2session(String tt_appid, String tt_secret,
                                                     String tt_code, String tt_anonymous_code);
 
-    public static class apps$jscode2session {
+    public static class apps$jscode2session implements Serializable{
         private String session_key;
         private String openid;
         private String anonymous_openid;
@@ -73,7 +73,7 @@ public abstract class ToutiaoAPI implements Serializable {
                                                         String tt_signature, String tt_sig_method,List<Kvltem> tt_kv_list);
 
 
-    public  class apps$set_user_storage {
+    public  class apps$set_user_storage implements Serializable{
         private long error;
 
     }
@@ -83,7 +83,7 @@ public abstract class ToutiaoAPI implements Serializable {
     public abstract apps$remove_user_storage apps$remove_user_storage(String tt_access_token, String tt_openid,
                                                               String tt_signature, String tt_sig_method, List<String> tt_kv_list);
 
-    public static class apps$remove_user_storage {
+    public static class apps$remove_user_storage implements Serializable {
         private long error;
 
         public long getError() {
@@ -107,7 +107,7 @@ public abstract class ToutiaoAPI implements Serializable {
 
 
 
-    public static class apps$game$template$send {
+    public static class apps$game$template$send implements Serializable{
 
         private String log_id;
         private String data;
