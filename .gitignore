@@ -25,3 +25,5 @@ hs_err_pid*
 .idea/compiler.xml
 target/
 .idea/vcs.xml
+.idea/compiler.xml
+.idea/vcs.xml
