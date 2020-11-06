@@ -7,7 +7,7 @@ import java.util.Map;
 
 public abstract class ToutiaoAPI {
 
-    public abstract String crypto(String sig_method, String session_key, String data);
+    public abstract String crypto(String sig_method, String session_key, String data) throws Exception;
     ///////////////////////////////////
     public static class errCode extends Exception {
         private long error;
@@ -307,7 +307,7 @@ public abstract class ToutiaoAPI {
 
     }
 
-    public abstract apps$game$template$send_response apps$game$template$send(apps$game$template$send_body request) throws errCode;
+    public abstract apps$game$template$send_response apps$game$template$send(apps$game$template$send_body body) throws errCode;
 
     public static class apps$game$template$send_response  {
         private int errcode;
