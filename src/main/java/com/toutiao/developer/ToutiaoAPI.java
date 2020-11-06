@@ -1,10 +1,14 @@
 package com.toutiao.developer;
 
-import java.io.Serializable;
+
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public abstract class ToutiaoAPI {
+
+    public abstract String crypto(String sig_method, String session_key, String data);
+    ///////////////////////////////////
     public static class errCode extends Exception {
         private long error;
         private long errcode;
@@ -50,7 +54,7 @@ public abstract class ToutiaoAPI {
             String appid, String secret,
             String grant_type) throws errCode;
 
-    public static class apps$token_response implements Serializable {
+    public static class apps$token_response  {
         private String access_token;
         private long expires_in;
 
@@ -77,7 +81,7 @@ public abstract class ToutiaoAPI {
     public abstract apps$jscode2session_response apps$jscode2session(String appid, String secret,
                                                                      String code, String anonymous_code) throws errCode;
 
-    public static class apps$jscode2session_response implements Serializable {
+    public static class apps$jscode2session_response  {
         private String session_key;
         private String openid;
         private String anonymous_openid;
@@ -110,15 +114,15 @@ public abstract class ToutiaoAPI {
     ///////////////////////////////////////////////////////
 
     public static class apps$set_user_storage_body  {
-        public List<Kvltem> getTt_kv_list() {
+        public List<Kv> getTt_kv_list() {
             return kv_list;
         }
 
-        public void setTt_kv_list(List<Kvltem> kv_list) {
+        public void setTt_kv_list(List<Kv> kv_list) {
             this.kv_list = kv_list;
         }
 
-        private List<Kvltem> kv_list;
+        private List<Kv> kv_list;
 
     }
 
@@ -126,7 +130,7 @@ public abstract class ToutiaoAPI {
                                                                          String signature, String sig_method, apps$set_user_storage_body body) throws errCode;
 
 
-    public class apps$set_user_storage_response implements Serializable {
+    public class apps$set_user_storage_response  {
         private long error;
 
     }
@@ -147,7 +151,7 @@ public abstract class ToutiaoAPI {
     public abstract apps$remove_user_storage_response apps$remove_user_storage(String access_token, String openid,
                                                                                         String signature, String sig_method, apps$remove_user_storage_body body) throws errCode;
 
-    public static class apps$remove_user_storage_response implements Serializable {
+    public static class apps$remove_user_storage_response  {
         private long error;
 
         public long getError() {
@@ -233,75 +237,79 @@ public abstract class ToutiaoAPI {
 
 
     public static class apps$game$template$send_body  {
+        public static class SubData{
+            public String getValue() {
+                return value;
+            }
 
-        private String log_id;
-        private String data;
-        private long code;
-        private String msg;
-        private String data_id;
-        private String task_id;
-        private List<Predict> predicts;
+            public void setValue(String value) {
+                this.value = value;
+            }
 
-        public String getLog_id() {
-            return log_id;
+            private String value;
+        }
+        private String access_token;
+        private String touser;
+        private String template_id;
+
+        public String getAccess_token() {
+            return access_token;
         }
 
-        public void setLog_id(String log_id) {
-            this.log_id = log_id;
+        public void setAccess_token(String access_token) {
+            this.access_token = access_token;
         }
 
-        public String getData() {
+        public String getTouser() {
+            return touser;
+        }
+
+        public void setTouser(String touser) {
+            this.touser = touser;
+        }
+
+        public String getTemplate_id() {
+            return template_id;
+        }
+
+        public void setTemplate_id(String template_id) {
+            this.template_id = template_id;
+        }
+
+        public String getPage() {
+            return page;
+        }
+
+        public void setPage(String page) {
+            this.page = page;
+        }
+
+        public String getForm_id() {
+            return form_id;
+        }
+
+        public void setForm_id(String form_id) {
+            this.form_id = form_id;
+        }
+
+        public Map<String, SubData> getData() {
             return data;
         }
 
-        public void setData(String data) {
+        public void setData(Map<String, SubData> data) {
             this.data = data;
         }
 
-        public long getCode() {
-            return code;
-        }
+        private String page;
+        private String form_id;
+        private Map<String,SubData > data	;
 
-        public void setCode(long code) {
-            this.code = code;
-        }
 
-        public String getMsg() {
-            return msg;
-        }
-
-        public void setMsg(String msg) {
-            this.msg = msg;
-        }
-
-        public String getData_id() {
-            return data_id;
-        }
-
-        public void setData_id(String data_id) {
-            this.data_id = data_id;
-        }
-
-        public String getTask_id() {
-            return task_id;
-        }
-
-        public void setTask_id(String task_id) {
-            this.task_id = task_id;
-        }
-
-        public List<Predict> getPredicts() {
-            return predicts;
-        }
-
-        public void setPredicts(List<Predict> predicts) {
-            this.predicts = predicts;
-        }
     }
 
-    public abstract apps$game$template$send_response apps$game$template$send(String X_Token, apps$game$template$send_body request) throws errCode;
+    public abstract apps$game$template$send_response apps$game$template$send(apps$game$template$send_body request) throws errCode;
 
-    public static class apps$game$template$send_response  implements Serializable{
+    public static class apps$game$template$send_response  {
         private int errcode;
 
         public int getErrcode() {
@@ -385,7 +393,7 @@ public abstract class ToutiaoAPI {
             apps$subscribe_notification$developer$v1$notify_body request
     ) throws errCode;
 
-    public static class apps$subscribe_notification$developer$v1$notify_response implements Serializable{
+    public static class apps$subscribe_notification$developer$v1$notify_response {
         private int err_no;
 
         public int getErr_no() {

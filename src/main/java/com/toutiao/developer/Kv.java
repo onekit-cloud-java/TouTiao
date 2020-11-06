@@ -1,9 +1,9 @@
 package com.toutiao.developer;
 
-import java.io.Serializable;
 
-public class Kvltem implements Serializable {
-    public Kvltem(String key, String value){
+
+public class Kv  {
+    public Kv(String key, String value){
         this.key=key;
         this.value=value;
     }

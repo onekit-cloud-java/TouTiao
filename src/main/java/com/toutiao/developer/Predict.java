@@ -1,8 +1,8 @@
 package com.toutiao.developer;
 
-import java.io.Serializable;
 
-public class Predict implements Serializable {
+
+public class Predict  {
         public Predict(
                 int prob,
                 boolean hit,

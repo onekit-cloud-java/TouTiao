@@ -1,8 +1,8 @@
 package com.toutiao.developer;
 
-import java.io.Serializable;
 
-public class RGB implements Serializable {
+
+public class RGB  {
      private int r, g, b;
 
      public RGB(int r, int g, int b) {
