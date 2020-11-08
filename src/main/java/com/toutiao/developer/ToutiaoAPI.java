@@ -2,7 +2,7 @@ package com.toutiao.developer;
 
 
 import java.util.HashMap;
-import java.util.List;
+import java.util.ArrayList;
 import java.util.Map;
 
 public abstract class ToutiaoAPI {
@@ -114,15 +114,15 @@ public abstract class ToutiaoAPI {
     ///////////////////////////////////////////////////////
 
     public static class apps$set_user_storage_body  {
-        public List<Kv> getTt_kv_list() {
+        public ArrayList<Kv> getTt_kv_list() {
             return kv_list;
         }
 
-        public void setTt_kv_list(List<Kv> kv_list) {
+        public void setTt_kv_list(ArrayList<Kv> kv_list) {
             this.kv_list = kv_list;
         }
 
-        private List<Kv> kv_list;
+        private ArrayList<Kv> kv_list;
 
     }
 
@@ -137,13 +137,13 @@ public abstract class ToutiaoAPI {
     //////////////////////////////////////////////////////
 
     public static class apps$remove_user_storage_body  {
-        private List<String> key;
+        private ArrayList<String> key;
 
-        public List<String> getKey() {
+        public ArrayList<String> getKey() {
             return key;
         }
 
-        public void setKey(List<String> key) {
+        public void setKey(ArrayList<String> key) {
             this.key = key;
         }
     }
@@ -192,11 +192,11 @@ public abstract class ToutiaoAPI {
             this.path = path;
         }
 
-        public int getWidth() {
+        public Integer getWidth() {
             return width;
         }
 
-        public void setWidth(int width) {
+        public void setWidth(Integer width) {
             this.width = width;
         }
 
@@ -216,19 +216,19 @@ public abstract class ToutiaoAPI {
             this.background = background;
         }
 
-        public boolean isSet_icon() {
+        public Boolean isSet_icon() {
             return set_icon;
         }
 
-        public void setSet_icon(boolean set_icon) {
+        public void setSet_icon(Boolean set_icon) {
             this.set_icon = set_icon;
         }
 
         private String path;
-        private int width;
+        private Integer width;
         private RGB line_color;
         private RGB background;
-        private boolean set_icon;
+        private Boolean set_icon;
     }
 
     public abstract byte[] apps$qrcode(apps$qrcode_body body) throws errCode;
@@ -310,13 +310,13 @@ public abstract class ToutiaoAPI {
     public abstract apps$game$template$send_response apps$game$template$send(apps$game$template$send_body body) throws errCode;
 
     public static class apps$game$template$send_response  {
-        private int errcode;
+        private Integer errcode;
 
-        public int getErrcode() {
+        public Integer getErrcode() {
             return errcode;
         }
 
-        public void setErrcode(int errcode) {
+        public void setErrcode(Integer errcode) {
             this.errcode = errcode;
         }
 
@@ -394,13 +394,13 @@ public abstract class ToutiaoAPI {
     ) throws errCode;
 
     public static class apps$subscribe_notification$developer$v1$notify_response {
-        private int err_no;
+        private Integer err_no;
 
-        public int getErr_no() {
+        public Integer getErr_no() {
             return err_no;
         }
 
-        public void setErr_no(int err_no) {
+        public void setErr_no(Integer err_no) {
             this.err_no = err_no;
         }
 

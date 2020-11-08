@@ -3,24 +3,24 @@ package com.toutiao.developer;
 
 
 public class RGB  {
-     private int r, g, b;
+     private Integer r, g, b;
 
-     public RGB(int r, int g, int b) {
+     public RGB(Integer r, Integer g, Integer b) {
           this.r = r;
           this.g = g;
           this.b = b;
      }
 
-     public int getR() {
+     public Integer getR() {
           return r;
      }
 
-     public int getG() {
+     public Integer getG() {
           return g;
      }
 
 
-     public int getB() {
+     public Integer getB() {
           return b;
      }
 
