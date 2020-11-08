@@ -17,6 +17,7 @@ com\toutiao\developer\ToutiaoAPI$apps$remove_user_storage_body.class
 com\toutiao\developer\ToutiaoAPI$apps$set_user_storage_response.class
 com\toutiao\developer\ToutiaoAPI.class
 com\toutiao\developer\ToutiaoAPI2$errCode.class
+com\toutiao\developer\ToutiaoAPI2$tags$image_body$Target.class
 com\toutiao\developer\ToutiaoAPI$apps$token_response.class
 com\toutiao\developer\ToutiaoAPI$apps$game$template$send_body$SubData.class
 com\toutiao\developer\ToutiaoAPI$errCode.class

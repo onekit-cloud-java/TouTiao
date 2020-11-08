@@ -145,6 +145,12 @@ public abstract class ToutiaoAPI2 {
 
     ////////////////////////
     public static class tags$image_body {
+        public enum  Target {
+            ad,
+            porn,
+            politics,
+            disgusting
+        }
         public static class Task {
             public String image;
 
@@ -167,15 +173,15 @@ public abstract class ToutiaoAPI2 {
             private String image_data;
         }
 
-        private List<String> targets;
+        private List<Target> targets;
         private List<tags$image_body.Task> tasks;
         private String image;
 
-        public List<String> getTargets() {
+        public List<Target> getTargets() {
             return targets;
         }
 
-        public void setTargets(List<String> targets) {
+        public void setTargets(List<Target> targets) {
             this.targets = targets;
         }
 
