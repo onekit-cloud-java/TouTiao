@@ -4,19 +4,19 @@ package com.toutiao.developer;
 
 public class Predict  {
 
-        public int getProb() {
+        public Integer getProb() {
                 return prob;
         }
 
-        public void setProb(int prob) {
+        public void setProb(Integer prob) {
                 this.prob = prob;
         }
 
-        public boolean isHit() {
+        public Boolean isHit() {
                 return hit;
         }
 
-        public void setHit(boolean hit) {
+        public void setHit(Boolean hit) {
                 this.hit = hit;
         }
 
@@ -36,8 +36,8 @@ public class Predict  {
                 this.model_name = model_name;
         }
 
-        private int prob;
-        private boolean hit;
+        private Integer prob;
+        private Boolean hit;
         private String target;
         private String model_name;
 

@@ -75,17 +75,17 @@ public abstract class ToutiaoAPI2 {
     public static class tags$text$antidirt_response {
         public static class Data {
 
-            private int code;
+            private Integer code;
             private String msg;
             private String data_id;
             private String task_id;
             private List<Predict> predicts;
 
-            public int getCode() {
+            public Integer getCode() {
                 return code;
             }
 
-            public void setCode(int code) {
+            public void setCode(Integer code) {
                 this.code = code;
             }
 
@@ -200,17 +200,17 @@ public abstract class ToutiaoAPI2 {
 
     public static class tags$image_response {
         public static class Data {
-            private long code;
+            private Integer code;
             private String msg;
             private String data_id;
             private String task_id;
             private List<Predict> predicts;
 
-            public long getCode() {
+            public Integer getCode() {
                 return code;
             }
 
-            public void setCode(long code) {
+            public void setCode(Integer code) {
                 this.code = code;
             }
 
