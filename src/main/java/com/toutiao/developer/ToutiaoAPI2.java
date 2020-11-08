@@ -145,7 +145,7 @@ public abstract class ToutiaoAPI2 {
 
     ////////////////////////
     public static class tags$image_body {
-        public static class tags$image_body_task {
+        public static class Task {
             public String image;
 
             public String getImage() {
@@ -168,7 +168,7 @@ public abstract class ToutiaoAPI2 {
         }
 
         private List<String> targets;
-        private List<tags$image_body_task> tasks;
+        private List<tags$image_body.Task> tasks;
         private String image;
 
         public List<String> getTargets() {
@@ -179,11 +179,11 @@ public abstract class ToutiaoAPI2 {
             this.targets = targets;
         }
 
-        public List<tags$image_body_task> getTasks() {
+        public List<tags$image_body.Task> getTasks() {
             return tasks;
         }
 
-        public void setTasks(List<tags$image_body_task> tasks) {
+        public void setTasks(List<tags$image_body.Task> tasks) {
             this.tasks = tasks;
         }
 

@@ -20,7 +20,7 @@ com\toutiao\developer\ToutiaoAPI2$errCode.class
 com\toutiao\developer\ToutiaoAPI$apps$token_response.class
 com\toutiao\developer\ToutiaoAPI$apps$game$template$send_body$SubData.class
 com\toutiao\developer\ToutiaoAPI$errCode.class
-com\toutiao\developer\ToutiaoAPI2$tags$image_body$tags$image_body_task.class
+com\toutiao\developer\ToutiaoAPI2$tags$image_body$Task.class
 com\toutiao\developer\ToutiaoAPI2$tags$image_body.class
 com\toutiao\developer\ToutiaoAPI2$tags$text$antidirt_body.class
 com\toutiao\developer\ToutiaoAPI2$tags$image_response$Data.class
