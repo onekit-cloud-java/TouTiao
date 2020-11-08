@@ -79,7 +79,7 @@ public abstract class ToutiaoAPI2 {
             private String msg;
             private String data_id;
             private String task_id;
-            private ArrayList<Predict> predicts;
+            private ArrayList<Predict> predicts = new ArrayList<>();
 
             public Integer getCode() {
                 return code;
@@ -124,7 +124,6 @@ public abstract class ToutiaoAPI2 {
         }
 
         private String log_id;
-        private Data data;
 
         public String getLog_id() {
             return log_id;
@@ -134,23 +133,26 @@ public abstract class ToutiaoAPI2 {
             this.log_id = log_id;
         }
 
-        public Data getData() {
+        private ArrayList<Data> data = new ArrayList<>();
+
+        public ArrayList<Data> getData() {
             return data;
         }
 
-        public void setData(Data data) {
+        public void setData(ArrayList<Data> data) {
             this.data = data;
         }
     }
 
     ////////////////////////
     public static class tags$image_body {
-        public enum  Target {
+        public enum Target {
             ad,
             porn,
             politics,
             disgusting
         }
+
         public static class Task {
             public String image;
 
@@ -173,8 +175,8 @@ public abstract class ToutiaoAPI2 {
             private String image_data;
         }
 
-        private ArrayList<Target> targets;
-        private ArrayList<tags$image_body.Task> tasks;
+        private ArrayList<Target> targets = new ArrayList<>();
+        private ArrayList<tags$image_body.Task> tasks = new ArrayList<>();
         private String image;
 
         public ArrayList<Target> getTargets() {
@@ -204,7 +206,7 @@ public abstract class ToutiaoAPI2 {
             private String msg;
             private String data_id;
             private String task_id;
-            private ArrayList<Predict> predicts;
+            private ArrayList<Predict> predicts=new ArrayList<>();
 
             public Integer getCode() {
                 return code;
@@ -249,7 +251,6 @@ public abstract class ToutiaoAPI2 {
         }
 
         private String log_id;
-        private Data data;
 
 
         public String getLog_id() {
@@ -260,11 +261,13 @@ public abstract class ToutiaoAPI2 {
             this.log_id = log_id;
         }
 
-        public Data getData() {
+        private ArrayList<tags$image_response.Data> data = new ArrayList<>();
+
+        public ArrayList<tags$image_response.Data> getData() {
             return data;
         }
 
-        public void setData(Data data) {
+        public void setData(ArrayList<tags$image_response.Data> data) {
             this.data = data;
         }
 
