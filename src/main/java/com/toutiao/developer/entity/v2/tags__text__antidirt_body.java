@@ -3,7 +3,7 @@ package com.toutiao.developer.entity.v2;
 
 import java.util.ArrayList;
 
-public  class tags$text$antidirt_body {
+public  class tags__text__antidirt_body {
     public static class Task {
         public String getContent() {
             return content;

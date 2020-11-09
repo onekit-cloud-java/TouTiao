@@ -3,7 +3,7 @@ package com.toutiao.developer.entity;
 
 import java.util.Map;
 
-public  class apps$game$template$send_body  {
+public  class apps__game__template__send_body  {
     public static class SubData{
         public String getValue() {
             return value;

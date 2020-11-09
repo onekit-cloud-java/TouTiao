@@ -1,6 +1,6 @@
 package com.toutiao.developer.entity;
 
-public  class apps$qrcode_body {
+public  class apps__qrcode_body {
     private String access_token;
     private String appname;
 

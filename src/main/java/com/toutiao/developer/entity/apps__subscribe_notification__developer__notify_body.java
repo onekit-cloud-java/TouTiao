@@ -2,7 +2,7 @@ package com.toutiao.developer.entity;
 
 import java.util.Map;
 
-public  class apps$subscribe_notification$developer$v1$notify_body{
+public  class apps__subscribe_notification__developer__notify_body{
     private String access_token;
     private   String app_id;
 

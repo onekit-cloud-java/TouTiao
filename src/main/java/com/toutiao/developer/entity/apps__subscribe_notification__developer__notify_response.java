@@ -1,7 +1,7 @@
 package com.toutiao.developer.entity;
 
 
-public  class apps$subscribe_notification$developer$v1$notify_response {
+public  class apps__subscribe_notification__developer__notify_response {
     private int err_no;
 
     public int getErr_no() {

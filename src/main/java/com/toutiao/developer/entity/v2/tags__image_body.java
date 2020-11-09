@@ -2,7 +2,7 @@ package com.toutiao.developer.entity.v2;
 
 import java.util.ArrayList;
 
-public  class tags$image_body {
+public  class tags__image_body {
     public enum Target {
         ad,
         porn,
@@ -33,7 +33,7 @@ public  class tags$image_body {
     }
 
     private ArrayList<Target> targets = new ArrayList<>();
-    private ArrayList<tags$image_body.Task> tasks = new ArrayList<>();
+    private ArrayList<tags__image_body.Task> tasks = new ArrayList<>();
     private String image;
 
     public ArrayList<Target> getTargets() {
@@ -44,11 +44,11 @@ public  class tags$image_body {
         this.targets = targets;
     }
 
-    public ArrayList<tags$image_body.Task> getTasks() {
+    public ArrayList<tags__image_body.Task> getTasks() {
         return tasks;
     }
 
-    public void setTasks(ArrayList<tags$image_body.Task> tasks) {
+    public void setTasks(ArrayList<tags__image_body.Task> tasks) {
         this.tasks = tasks;
     }
 

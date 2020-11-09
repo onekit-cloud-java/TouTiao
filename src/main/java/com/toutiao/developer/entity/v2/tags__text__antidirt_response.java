@@ -4,13 +4,14 @@ import com.toutiao.developer.entity.Predict;
 
 import java.util.ArrayList;
 
-public  class tags$image_response {
+public  class tags__text__antidirt_response {
     public static class Data {
+
         private int code;
         private String msg;
         private String data_id;
         private String task_id;
-        private ArrayList<Predict> predicts=new ArrayList<>();
+        private ArrayList<Predict> predicts = new ArrayList<>();
 
         public int getCode() {
             return code;
@@ -56,7 +57,6 @@ public  class tags$image_response {
 
     private String log_id;
 
-
     public String getLog_id() {
         return log_id;
     }
@@ -65,14 +65,13 @@ public  class tags$image_response {
         this.log_id = log_id;
     }
 
-    private ArrayList<tags$image_response.Data> data = new ArrayList<>();
+    private ArrayList<Data> data = new ArrayList<>();
 
-    public ArrayList<tags$image_response.Data> getData() {
+    public ArrayList<Data> getData() {
         return data;
     }
 
-    public void setData(ArrayList<tags$image_response.Data> data) {
+    public void setData(ArrayList<Data> data) {
         this.data = data;
     }
-
 }

@@ -1,7 +1,7 @@
 package com.toutiao.developer.entity;
 
 
-public  class apps$game$template$send_response   {
+public  class apps__game__template__send_response   {
     private int errcode;
 
     public int getErrcode() {

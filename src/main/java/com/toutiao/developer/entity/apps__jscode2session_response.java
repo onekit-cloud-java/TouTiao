@@ -1,6 +1,6 @@
 package com.toutiao.developer.entity;
 
-public  class apps$jscode2session_response {
+public  class apps__jscode2session_response {
     private String session_key;
     private String openid;
     private String anonymous_openid;

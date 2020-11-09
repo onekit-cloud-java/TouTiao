@@ -1,6 +1,6 @@
 package com.toutiao.developer.entity;
 
-public  class apps$token_response  {
+public  class apps__token_response  {
     private String access_token;
     private long expires_in;
 

@@ -1,7 +1,7 @@
 package com.toutiao.developer.entity;
 
 
-public  class apps$remove_user_storage_response  {
+public  class apps__remove_user_storage_response  {
     private long error;
 
     public long getError() {
