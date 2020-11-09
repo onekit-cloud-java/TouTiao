@@ -1,9 +1,9 @@
-package com.toutiao.developer;
+package com.toutiao.developer.entity;
 
 
 
-public class Kv  {
-    public Kv(String key, String value){
+public class KV {
+    public KV(String key, String value){
         this.key=key;
         this.value=value;
     }

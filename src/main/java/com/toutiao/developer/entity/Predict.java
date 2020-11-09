@@ -1,14 +1,14 @@
-package com.toutiao.developer;
+package com.toutiao.developer.entity;
 
 
 
 public class Predict  {
 
-        public Integer getProb() {
+        public int getProb() {
                 return prob;
         }
 
-        public void setProb(Integer prob) {
+        public void setProb(int prob) {
                 this.prob = prob;
         }
 
@@ -36,7 +36,7 @@ public class Predict  {
                 this.model_name = model_name;
         }
 
-        private Integer prob;
+        private int prob;
         private Boolean hit;
         private String target;
         private String model_name;

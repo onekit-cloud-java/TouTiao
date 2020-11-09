@@ -2,7 +2,7 @@ package com.toutiao.developer.entity.v2;
 
 public class ToutiaoError extends Exception {
         private String error_id;
-        private Integer code;
+        private int code;
         private String message;
         private String exception;
 
@@ -14,11 +14,11 @@ public class ToutiaoError extends Exception {
             this.error_id = error_id;
         }
 
-        public Integer getCode() {
+        public int getCode() {
             return code;
         }
 
-        public void setCode(Integer code) {
+        public void setCode(int code) {
             this.code = code;
         }
 

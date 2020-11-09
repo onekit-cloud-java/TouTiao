@@ -1,23 +1,23 @@
 package com.toutiao.developer.entity.v2;
 
-import com.toutiao.developer.Predict;
+import com.toutiao.developer.entity.Predict;
 
 import java.util.ArrayList;
 
 public  class tags$text$antidirt_response {
     public static class Data {
 
-        private Integer code;
+        private int code;
         private String msg;
         private String data_id;
         private String task_id;
         private ArrayList<Predict> predicts = new ArrayList<>();
 
-        public Integer getCode() {
+        public int getCode() {
             return code;
         }
 
-        public void setCode(Integer code) {
+        public void setCode(int code) {
             this.code = code;
         }
 

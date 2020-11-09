@@ -1,7 +1,5 @@
 package com.toutiao.developer.entity;
 
-import com.toutiao.developer.RGB;
-
 public  class apps$qrcode_body {
     private String access_token;
     private String appname;
@@ -30,11 +28,11 @@ public  class apps$qrcode_body {
         this.path = path;
     }
 
-    public Integer getWidth() {
+    public int getWidth() {
         return width;
     }
 
-    public void setWidth(Integer width) {
+    public void setWidth(int width) {
         this.width = width;
     }
 
@@ -63,7 +61,7 @@ public  class apps$qrcode_body {
     }
 
     private String path;
-    private Integer width;
+    private int width;
     private RGB line_color;
     private RGB background;
     private Boolean set_icon;

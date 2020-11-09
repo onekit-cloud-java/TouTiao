@@ -2,13 +2,13 @@ package com.toutiao.developer.entity;
 
 
 public  class apps$game$template$send_response   {
-    private Integer errcode;
+    private int errcode;
 
-    public Integer getErrcode() {
+    public int getErrcode() {
         return errcode;
     }
 
-    public void setErrcode(Integer errcode) {
+    public void setErrcode(int errcode) {
         this.errcode = errcode;
     }
 
