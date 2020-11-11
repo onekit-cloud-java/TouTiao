@@ -1,11 +1,11 @@
 package com.toutiao.developer;
 
-
 import com.toutiao.developer.entity.*;
 
 public interface ToutiaoAPI {
 
-    String _crypto(String sig_method, String session_key, String data) throws Exception;
+     String _sign(String sig_method, String session_key, String data) throws Exception;
+     String _sign( String rawData,String session_key) throws Exception;
 
     apps__token_response apps__token(
             String appid, String secret,
