@@ -12,5 +12,4 @@ public  class apps__subscribe_notification__developer__notify_response {
         this.err_no = err_no;
     }
 
-    private String err_tips;
 }

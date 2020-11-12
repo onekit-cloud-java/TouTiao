@@ -30,3 +30,4 @@ target/
 .idea/compiler.xml
 .idea/compiler.xml
 .idea/compiler.xml
+src/main/java/com/toutiao/developer/entity/apps__set_user_storage_response.java
