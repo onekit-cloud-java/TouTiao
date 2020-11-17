@@ -1,24 +1,23 @@
 package com.toutiao.developer.entity;
 
 public class ToutiaoError extends Exception{
-    private long error;
-    private long errcode;
+    private int error;
+    private int errcode;
     private String errmsg;
-    private String message;
 
-    public long getError() {
+    public int getError() {
         return error;
     }
 
-    public void setError(long error) {
+    public void setError(int error) {
         this.error = error;
     }
 
-    public long getErrcode() {
+    public int getErrcode() {
         return errcode;
     }
 
-    public void setErrcode(long errcode) {
+    public void setErrcode(int errcode) {
         this.errcode = errcode;
     }
 
@@ -28,14 +27,5 @@ public class ToutiaoError extends Exception{
 
     public void setErrmsg(String errmsg) {
         this.errmsg = errmsg;
-    }
-
-    @Override
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
     }
 }
