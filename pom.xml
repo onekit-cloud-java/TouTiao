@@ -6,7 +6,7 @@
 
     <groupId>cn.onekit.x2x.cloud</groupId>
     <artifactId>toutiao</artifactId>
-    <version>4.4.44</version>
+    <version>4.4.45</version>
     <name>Toutiao</name>
     <url>https://github.com/onekit-cloud-java/toutiao</url>
     <description>toutiao cloud api standard</description>
@@ -93,6 +93,7 @@ mvn clean deploy -P release
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
+
                         <version>1.5</version>
                         <executions>
                             <execution>
@@ -134,6 +135,17 @@ mvn clean deploy -P release
                         </configuration>
                     </plugin>
                 </plugins>
+                <pluginManagement>
+                    <plugins>
+                        <plugin>
+                            <groupId>org.apache.maven.plugins</groupId>
+                            <artifactId>maven-gpg-plugin</artifactId>
+                            <configuration>
+                                <skip>true</skip>
+                            </configuration>
+                        </plugin>
+                    </plugins>
+                </pluginManagement>
             </build>
             <distributionManagement>
                 <snapshotRepository>
