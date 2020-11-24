@@ -4,6 +4,7 @@ public class ToutiaoError extends Exception{
     private int error;
     private int errcode;
     private String errmsg;
+    private String message;
 
     public int getError() {
         return error;
@@ -27,5 +28,14 @@ public class ToutiaoError extends Exception{
 
     public void setErrmsg(String errmsg) {
         this.errmsg = errmsg;
+    }
+
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
     }
 }
