@@ -27,17 +27,17 @@ public interface ToutiaoAPI {
     apps__jscode2session_response apps__jscode2session(String tt_appid, String tt_secret,
                                                        String tt_code, String tt_anonymous_code) throws ToutiaoError;
 
-    apps__set_user_storage_response apps__set_user_storage(String tt_access_token, String tt_openid,
-                                                           String tt_signature, String tt_sig_method, apps__set_user_storage_body tt_body) throws ToutiaoError;
-
-
-    apps__remove_user_storage_response apps__remove_user_storage(String tt_access_token, String tt_openid,
-                                                                 String tt_signature, String tt_sig_method, apps__remove_user_storage_body tt_body) throws ToutiaoError;
+//    apps__set_user_storage_response apps__set_user_storage(String tt_access_token, String tt_openid,
+//                                                           String tt_signature, String tt_sig_method, apps__set_user_storage_body tt_body) throws ToutiaoError;
+//
+//
+//    apps__remove_user_storage_response apps__remove_user_storage(String tt_access_token, String tt_openid,
+//                                                                 String tt_signature, String tt_sig_method, apps__remove_user_storage_body tt_body) throws ToutiaoError;
 
 
     byte[] apps__qrcode(apps__qrcode_body tt_body) throws ToutiaoError;
 
-    apps__game__template__send_response apps__game__template__send(apps__game__template__send_body tt_body) throws ToutiaoError;
+    //apps__game__template__send_response apps__game__template__send(apps__game__template__send_body tt_body) throws ToutiaoError;
 
     apps__subscribe_notification__developer__notify_response apps__subscribe_notification__developer__notify(
             apps__subscribe_notification__developer__notify_body tt_body
