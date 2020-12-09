@@ -6,7 +6,19 @@
 
     <groupId>cn.onekit.x2x.cloud</groupId>
     <artifactId>toutiao</artifactId>
-    <version>4.6.0</version>
+    <version>4.6.1</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
     <name>Toutiao</name>
     <url>https://github.com/onekit-cloud-java/toutiao</url>
     <description>toutiao cloud api standard</description>
@@ -14,7 +26,7 @@
         <dependency>
             <groupId>cn.onekit.x2x.cloud</groupId>
             <artifactId>TheKit</artifactId>
-            <version>3.0.0</version>
+            <version>3.3.1</version>
         </dependency>
     </dependencies>
 

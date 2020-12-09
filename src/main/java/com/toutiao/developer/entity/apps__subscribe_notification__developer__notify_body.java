@@ -1,7 +1,7 @@
 package com.toutiao.developer.entity;
 
 import java.util.Map;
-
+@SuppressWarnings("unused")
 public  class apps__subscribe_notification__developer__notify_body{
     private String access_token;
     private   String app_id;

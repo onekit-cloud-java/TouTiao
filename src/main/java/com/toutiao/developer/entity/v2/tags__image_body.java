@@ -1,8 +1,9 @@
 package com.toutiao.developer.entity.v2;
 
 import java.util.ArrayList;
-
+@SuppressWarnings("unused")
 public  class tags__image_body {
+
     public enum Target {
         ad,
         porn,
@@ -10,6 +11,7 @@ public  class tags__image_body {
         disgusting
     }
 
+    @SuppressWarnings("WeakerAccess")
     public static class Task {
         public String image;
 

@@ -1,6 +1,6 @@
 package com.toutiao.developer.entity;
 
-
+@SuppressWarnings("unused")
 public  class apps__subscribe_notification__developer__notify_response {
     private int err_no;
     private String err_tips;

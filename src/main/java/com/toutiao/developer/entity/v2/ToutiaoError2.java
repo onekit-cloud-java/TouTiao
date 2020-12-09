@@ -1,5 +1,6 @@
 package com.toutiao.developer.entity.v2;
 
+@SuppressWarnings("unused")
 public class ToutiaoError2 extends Exception {
         private String error_id;
         private int code;

@@ -3,7 +3,7 @@ package com.toutiao.developer.entity.v2;
 import com.toutiao.developer.entity.Predict;
 
 import java.util.ArrayList;
-
+@SuppressWarnings("unused")
 public  class tags__text__antidirt_response {
     public static class Data {
 

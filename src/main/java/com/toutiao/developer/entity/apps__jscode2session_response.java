@@ -1,5 +1,5 @@
 package com.toutiao.developer.entity;
-
+@SuppressWarnings("unused")
 public  class apps__jscode2session_response {
     private String session_key;
     private String openid;

@@ -1,5 +1,5 @@
 package com.toutiao.developer.entity;
-
+@SuppressWarnings("unused")
 public  class apps__qrcode_body {
     private String access_token;
     private String appname;

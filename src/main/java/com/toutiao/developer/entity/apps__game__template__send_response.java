@@ -1,6 +1,6 @@
 package com.toutiao.developer.entity;
 
-
+@SuppressWarnings("unused")
 public  class apps__game__template__send_response   {
     private int errcode;
 

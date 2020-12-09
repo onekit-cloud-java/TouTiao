@@ -2,21 +2,19 @@ package com.toutiao.developer;
 
 import cn.onekit.thekit.SIGN;
 import com.toutiao.developer.entity.*;
-
+@SuppressWarnings("unused")
 public interface ToutiaoAPI {
-    public default String _signBody(String tt_sig_method, String tt_session_key, String tt_body) throws Exception {
+    default String _signBody(String tt_sig_method, String tt_session_key, String tt_body) throws Exception {
         SIGN.Method method;
-        switch (tt_sig_method) {
-            case "hmac_sha256":
-                method = SIGN.Method.HMACSHA256;
-                break;
-            default:
-                throw new Exception(tt_sig_method);
+        if ("hmac_sha256".equals(tt_sig_method)) {
+            method = SIGN.Method.HMACSHA256;
+        } else {
+            throw new Exception(tt_sig_method);
         }
         return new SIGN(method).sign(tt_session_key, tt_body);
     }
 
-    public default String _signRaw(String tt_rawData, String tt_session_key) throws Exception {
+    default String _signRaw(String tt_rawData, String tt_session_key) throws Exception {
         return new SIGN(SIGN.Method.SHA1).sign(tt_rawData + tt_session_key);
     }
 

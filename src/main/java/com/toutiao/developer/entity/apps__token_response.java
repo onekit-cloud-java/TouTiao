@@ -1,5 +1,5 @@
 package com.toutiao.developer.entity;
-
+@SuppressWarnings("unused")
 public  class apps__token_response  {
     private String access_token;
     private long expires_in;

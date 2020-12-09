@@ -1,7 +1,7 @@
 package com.toutiao.developer.entity;
 
 
-
+@SuppressWarnings("unused")
 public class KV {
     public KV(String key, String value){
         this.key=key;

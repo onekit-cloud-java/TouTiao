@@ -1,7 +1,7 @@
 package com.toutiao.developer.entity;
 
 
-
+@SuppressWarnings("unused")
 public class Predict  {
 
         public int getProb() {

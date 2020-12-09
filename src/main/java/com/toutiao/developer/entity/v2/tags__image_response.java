@@ -3,7 +3,7 @@ package com.toutiao.developer.entity.v2;
 import com.toutiao.developer.entity.Predict;
 
 import java.util.ArrayList;
-
+@SuppressWarnings("unused")
 public  class tags__image_response {
     public static class Data {
         private int code;

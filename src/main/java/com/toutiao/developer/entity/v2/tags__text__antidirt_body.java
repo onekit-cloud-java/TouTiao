@@ -2,7 +2,7 @@ package com.toutiao.developer.entity.v2;
 
 
 import java.util.ArrayList;
-
+@SuppressWarnings("unused")
 public  class tags__text__antidirt_body {
     public static class Task {
         public String getContent() {
@@ -16,6 +16,7 @@ public  class tags__text__antidirt_body {
         private String content;
     }
 
+    @SuppressWarnings("WeakerAccess")
     public ArrayList<Task> tasks;
 
     public ArrayList<Task> getTasks() {

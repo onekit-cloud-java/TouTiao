@@ -2,7 +2,7 @@ package com.toutiao.developer;
 
 
 import com.toutiao.developer.entity.v2.*;
-
+@SuppressWarnings("unused")
 public interface ToutiaoAPI2 {
 
     tags__text__antidirt_response tags__text__antidirt(

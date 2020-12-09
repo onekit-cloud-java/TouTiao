@@ -2,7 +2,7 @@ package com.toutiao.developer.entity;
 
 
 import java.util.Map;
-
+@SuppressWarnings("unused")
 public  class apps__game__template__send_body  {
     public static class SubData{
         public String getValue() {

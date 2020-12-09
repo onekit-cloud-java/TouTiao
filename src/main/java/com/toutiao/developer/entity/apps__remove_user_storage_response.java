@@ -1,6 +1,6 @@
 package com.toutiao.developer.entity;
 
-
+@SuppressWarnings("unused")
 public  class apps__remove_user_storage_response  {
     private long error;
 

@@ -1,7 +1,7 @@
 package com.toutiao.developer.entity;
 
 import java.util.ArrayList;
-
+@SuppressWarnings("unused")
 public class apps__remove_user_storage_body {
     private ArrayList<String> key;
 
