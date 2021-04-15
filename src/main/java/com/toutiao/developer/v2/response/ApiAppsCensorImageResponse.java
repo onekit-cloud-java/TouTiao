@@ -9,11 +9,7 @@ import java.util.List;
 public class ApiAppsCensorImageResponse {
     private Integer error;
     private String message;
-
-    @lombok.Data
-    public static class Data {
-
-        private List<Predict> predicts;
+    private List<Predict> predicts;
 
         @lombok.Data
         public class Predict  {
@@ -23,5 +19,5 @@ public class ApiAppsCensorImageResponse {
         }
 
 
-    }
+
 }

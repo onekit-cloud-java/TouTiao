@@ -8,6 +8,7 @@ public class ApiAppsRemoveUserStorageRequest {
     private String access_token;
     private String openid;
     private String signature;
-    private String sig_method;
+    private final String sig_method = "hmac_sha256";
     private List<String> key;
+    private String session_key;
 }

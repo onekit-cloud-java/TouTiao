@@ -26,7 +26,7 @@
         <dependency>
             <groupId>cn.onekit.x2x.cloud</groupId>
             <artifactId>TheKit</artifactId>
-            <version>4.2.4</version>
+            <version>4.3.0</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>

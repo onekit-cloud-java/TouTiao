@@ -7,7 +7,7 @@ import java.util.List;
 @Data
 public class ApiTagsTextAntidirtResponse {
     private String log_id;
-    private Data data;
+    private List<Data> data;
 
     @lombok.Data
     public static class Data {
