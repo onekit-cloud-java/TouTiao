@@ -1,4 +1,4 @@
-package com.toutiao.developer.entity.v2;
+package com.toutiao.developer.v2;
 
 @SuppressWarnings("unused")
 public class ToutiaoError2 extends Exception {
